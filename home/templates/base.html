@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html  >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static 'assets/images/elegant-circle-signature-photography-logo-40-40-px-48-48-px.svg' %}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/web/assets/gdpr-plugin/gdpr-styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/smart-cart/minicart-theme.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/recaptcha.css' %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Homemade+Apple:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homemade+Apple:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}"><link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
+
+  
+  
+  
+</head>
+<body>
+
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-tuo0Qdhh94" once="menu" id="menu2-d">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'assets/images/eileenstuffs-logo-no-bg-460x113.png' %}" alt="" style="height: 3.6rem;">
+                    </a>
+                </span>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{% url 'home' %}">
+                            Home&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{% url 'post-list' %}">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="https://www.etsy.com/shop/EileenStuffs?ref=l2-about-shopname">Shop</a>
+                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#formbuilder-r">Contact Me&nbsp;</a></li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+</section>
+    {% block content %}
+    {% endblock %}    
+
+<section data-bs-version="5.1" class="footer1 cid-tuon0ZVyCc" once="footers" id="footer01-y">
+    
+    
+    
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-12 col-lg-3">
+                <div class="social-list text-center">
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="#https://www.youtube.com/channel/UCRfLVjfx_ouOa0Zojiq-Lgw" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+
+
+            <div class="col-12 col-md-12 col-lg-4">
+                <ul class="foot-menu pt-2">
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-4"><a href="index.html" class="text-black">Home</a></li><li class="foot-menu-item mbr-fonts-style display-4"><a href="articles.html" class="text-primary">Articles</a></li><li class="foot-menu-item mbr-fonts-style display-4"><a href="shop.html" class="text-primary">Shop</a></li><li class="foot-menu-item mbr-fonts-style display-4"><a href="index.html#formbuilder-r" class="text-primary">Contact Me</a></li></ul>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-5">
+                <p class="mbr-text pt-3 align-right mbr-fonts-style display-4">
+                    © Copyright 2023 Eileen Stuffs. All Rights Reserved.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/web/assets/cookies-alert-plugin/cookies-alert-core.js' %}"></script>
+  <script src="{% static 'assets/web/assets/cookies-alert-plugin/cookies-alert-script.j' %}"></script>
+  <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'assets/ytplayer/index.js' %}"></script>
+  <script src="{% static 'assets/smart-cart/minicart.js' %}"></script>
+  <script src="{% static 'assets/smart-cart/minicart-customizer.js' %}"></script>
+  <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'assets/theme/js/script.js' %}"></script>
+  <script src="{% static 'assets/formoid.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  
+  
+  
+<input name="cookieData" type="hidden" data-cookie-cookiesAlertType='false' data-cookie-customDialogSelector='null' data-cookie-colorText='#424a4d' data-cookie-colorBg='rgb(255, 255, 255)' data-cookie-opacityOverlay='0' data-cookie-textButton='GOT IT' data-cookie-rejectText='REJECT' data-cookie-colorButton='' data-cookie-rejectColor='' data-cookie-colorLink='#424a4d' data-cookie-underlineLink='true' data-cookie-text="We use cookies to give you the best experience. Read our <a href='privacy.html'>cookie policy</a>.">
+  </body>
+</html>

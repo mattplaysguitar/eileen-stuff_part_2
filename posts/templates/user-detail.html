@@ -1,0 +1,17 @@
+<!--templates/user-detail.html-->
+{% extends "base.html" %}
+ç
+{% block title %}Account Detail{% endblock title %}
+{% block content %}
+<H1 style="text-align: center;">Accounts</H1>
+<h5 class="jost">username: {{user.username}}</h5>
+<h5 class="jost">First name : {{user.first_name}}</h5>
+<h5 class="jost">Last name : {{user.last_name}}</h5>
+<h5 class="jost">Email address : {{user.email}}</h5>
+<div class="br">
+    <h5 class="jost"><a href="{% url 'user-edit' user.pk %}">Edit</a></h5>
+    <h5 class="jost"><a href="{% url 'password_change' %}">Change Password</a></h5>
+
+</div>
+
+{% endblock content %}

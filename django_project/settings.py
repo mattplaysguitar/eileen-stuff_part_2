@@ -33,9 +33,12 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "debug_toolbar",
+    "ckeditor",
     "storages",
     # Local
     "accounts",
+    "posts",
+    "home",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
@@ -176,3 +179,20 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+#static root
+STATIC_URL = "static/"
+STATICFILES_DIRS = [ BASE_DIR / 'static/' ]
+
+#django-storages
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_ACCESS_KEY_ID = env("AWS_S3_ACCESS_KEY_ID")
+AWS_S3_SECRET_ACCESS_KEY = env("AWS_S3_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
+AWS_QUERYSTRING_AUTH = env.bool("AWS_QUERYSTRING_AUTH")
+
+#media root
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media/"

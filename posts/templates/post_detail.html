@@ -1,0 +1,68 @@
+<!--templates/blog-detail.html-->
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Post Detail{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="title mb-5">{{post.title}}</h1>
+    <h4 class="pb-4" >by {{post.author.first_name}} {{post.author.last_name}}</h4>
+
+
+<div class="jost">
+   {{post.body1|safe}}
+   </div>
+
+{% if post.no_video == True %}
+
+{% else %}
+
+   <div class="video" style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   </div>
+   
+{% endif %}
+
+   <div class="jost" style="padding-top: 4rem; padding-bottom: 3rem;">
+    {{post.body2|safe}}
+</div>
+<div style="padding-bottom: 2rem;">
+  {% if user == post.author %}
+  <p>    <a href="{% url 'post-edit' post.pk %}">Edit Post</a> |
+      <a href="{% url 'post-delete' post.pk %}">Delete Post</a>
+  </p>
+  {% else %}
+  {% endif %}
+  <a href="{% url 'post-list' %}">All Posts</a>
+</div>
+
+<div>
+</div>
+<div style="border-bottom: solid 2px lightgrey;"></div>
+<div class="mt-3">
+  <h4 class="jost" style=";">Comments</h4>
+  <div>
+    {% if user.is_authenticated %}
+    <form action="" method="post" >
+        {% csrf_token %}
+        {{ form|crispy }}     
+        <button class="btn" type="submit">Save</button>
+    </form>
+    {% else %}
+    <p><a href="{% url 'login' %}?next={{request.path}}">Login to comment</a>
+    </p>
+<p><a href=""></a></a></p>
+    {% endif %}
+</div>
+  {% for comment in post.comment_set.all %}
+  <li class="jost" style="display: inline; padding-bottom: 5px;">{{comment.author.username }}</li>
+  <li class="jost" style="display: inline; color: gray;"> {{comment.pub_date|timesince}} ago</li>
+  <div style="padding-bottom: ;"></div>
+<p class="jost" style="padding: 5px;">{{ comment|safe }}</p>
+
+  {% endfor %}
+</div>
+
+
+</div>
+{% endblock content %}
