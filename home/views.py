@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from posts.models import Post
 
-class IndexView(TemplateView):
-    template_name = "index.html"
+def IndexView(request):
+    post = Post.objects.all()
+    context = {
+        "posts":post,
+        }
+    return render(request, "index.html", context)
+
+    
