@@ -53,7 +53,6 @@ class PostDetailView( View):  # new
         return view(request, *args, **kwargs)
     
    
-   
 class PostListView(ListView):
     model = Post
     template_name = "post-list.html"
@@ -94,12 +93,19 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class SearchResultsListView(ListView):
     model = Post
     context_object_name = "post_list"
-    template_name = "post/search_results.html"
+    template_name = "search_results.html"
     
     def get_queryset(self): # new
         query = self.request.GET.get("q")
         return Post.objects.filter(
             Q(title__icontains=query) | Q(post_summary__icontains=query))
+    
+    
+class AdminPostList(ListView):
+    model = Post
+    template_name = "admin/admin_post_list.html"
+    
+
     
     
     

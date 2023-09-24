@@ -1,8 +1,8 @@
 <!--templates/post_edit.html-->
-{% extends "base.html" %}
+{% extends "sidebar.html" %}
 {% block title %}Edit Post{% endblock title %}
 {% block content %}
-<div class="box">
+<div class="container">
 
     <h2 class="jost">Edit Post</h2>
 <form action="" method="post" enctype="multipart/form-data">
@@ -10,7 +10,7 @@
     {{ form.media }}
     {{ form.as_p }}
 
-   <button class="btn" type="Submit">Save</button>
+    <button class="btn btn-primary" type="submit">Save</button>
 </form>
 
 </div>
