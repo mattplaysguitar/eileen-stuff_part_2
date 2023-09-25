@@ -196,3 +196,6 @@ AWS_QUERYSTRING_AUTH = env.bool("AWS_QUERYSTRING_AUTH")
 #media root
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media/"
+
+#django ckeditor
+CKEDITOR_UPLOAD_PATH = "uploads/"

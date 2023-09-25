@@ -1,0 +1,21 @@
+<!--templates/post/search_results.html-->
+{% extends "base.html" %}
+{% block title %}Search Results{% endblock title %}
+{% block content %}
+<div class="container">
+    <h1>Search Results</h1>
+    {% for post in post_list %}
+    <div class="search-results">
+        <h3 class="jost"><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h3>
+        <p class="jost"><b>Author</b>: {{post.author.first_name}} {{post.author.last_name}}</p>
+        <p class="jost"><b>Summary</b>:{{post.post_summary|safe}}</p>
+        <p class="jost"><b>date posted</b>: {{post.date}}</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock content %}
+

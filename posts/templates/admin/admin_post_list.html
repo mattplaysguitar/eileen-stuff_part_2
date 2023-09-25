@@ -1,12 +1,12 @@
-<!--templates/post-list.html-->
-{% extends "base.html" %}
+<!--templates/sidebar.html-->
+{% extends "sidebar.html" %}
 {% block title %}All Posts{% endblock title %}
 {% block content %}
-<H1 class="mt-5" style="text-align: center;">All Articles</H1>
-<div class="container ">
+<H1 class="" style="text-align: center;">All Articles</H1>
+<div class="">
   <form class="d-flex me-3 py-2" action="{% url 'search-results' %}" method="get">
-    <input class="search-bar" type="search" name="q" placeholder="Search" aria-label="Search" size="">
-    <button class="btn btn-primary ml-2" type="submit">Search</button>
+    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search" >
+    <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
     {% for post in post_list %}
         <div class="">
@@ -35,7 +35,7 @@
                       <li class="jost" style="display: inline; color: gray;"> {{comment.pub_date|timesince}} ago</li>
                       <div style="padding-bottom: 1rem;"></div>
                     </ul>
-                    <p class="jost">{{ comment.comment|safe }}</p>
+                    <p class="jost">{{ comment|safe }}</p>
                     
                     {% endfor %}
                   </div>

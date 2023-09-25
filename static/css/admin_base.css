@@ -1,0 +1,46 @@
+.sidebar {
+    height: 100%;
+    width: 12%;
+    position: absolute;
+    left: ;
+    top: 0;
+    padding-top: 40px;
+}
+
+.sidebar a {
+    padding: 8px;
+    font-size: 24;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.body {
+    margin-left: 12%;
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.sidebar-li {
+    margin-left: 1%;
+}
+
+p, a, h2, h1 {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 600;
+}

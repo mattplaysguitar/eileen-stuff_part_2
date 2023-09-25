@@ -1,3 +1,24 @@
 h1 {
     font-family: 'Homemade Apple', cursive !important;
+    text-align: center; 
+}
+
+p {
+    font-family: 'Jost', sans-serif;
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+.search-bar {
+    width: 90%;
+}
+
+.search-results {
+    margin-bottom: 3rem;
+}
+
+.comment-post {
+    margin-top: 3rem;
 }

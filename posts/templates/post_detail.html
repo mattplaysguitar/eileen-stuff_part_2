@@ -4,7 +4,7 @@
 {% block title %}Post Detail{% endblock title %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container">
     <h1 class="title mb-5">{{post.title}}</h1>
     <h4 class="pb-4" >by {{post.author.first_name}} {{post.author.last_name}}</h4>
 
@@ -46,20 +46,18 @@
     <form action="" method="post" >
         {% csrf_token %}
         {{ form|crispy }}     
-        <button class="btn" type="submit">Save</button>
+        <button class="btn btn-primary" type="submit">Save</button>
     </form>
     {% else %}
-    <p><a href="{% url 'login' %}?next={{request.path}}">Login to comment</a>
+    <p><a href="{% url 'account_login' %}?next={{request.path}}">Login to comment</a>
     </p>
 <p><a href=""></a></a></p>
     {% endif %}
-</div>
+</div class="comment-post">
   {% for comment in post.comment_set.all %}
-  <li class="jost" style="display: inline; padding-bottom: 5px;">{{comment.author.username }}</li>
-  <li class="jost" style="display: inline; color: gray;"> {{comment.pub_date|timesince}} ago</li>
-  <div style="padding-bottom: ;"></div>
-<p class="jost" style="padding: 5px;">{{ comment|safe }}</p>
-
+  <li style="display: inline; padding-bottom: 5px;">{{comment.author.username }}</li>
+  <li style="display: inline; color: gray;"> {{comment.pub_date|timesince}} ago</li>
+  <p class=>{{ comment.comment|safe }}</p>
   {% endfor %}
 </div>
 

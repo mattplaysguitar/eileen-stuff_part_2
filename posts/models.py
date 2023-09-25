@@ -7,7 +7,6 @@ import uuid
 
 #3rd party
 from ckeditor.fields import RichTextField
-from .validators import *
 
 
 class Post(models.Model):
