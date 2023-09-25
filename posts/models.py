@@ -11,7 +11,7 @@ from ckeditor.fields import RichTextField
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default= uuid.uuid4, editable=False)
-    title = models.CharField(max_length=100,blank=True)
+    title = models.CharField(max_length=100,blank=True, )
     post_summary = RichTextField(null=True, blank=True,)
     body1 = RichTextField(null=True, blank=True,)
     body2 = RichTextField(null=True, blank=True,)

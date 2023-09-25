@@ -8,17 +8,15 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="{% static 'assets/images/elegant-circle-signature-photography-logo-40-40-px-48-48-px.svg' %}" type="image/x-icon">
+  <link rel="mask-icon" href="{% static 'assets/images/elegant-circle-signature-photography-logo-40-40-px-48-48-px.svg' %}" type="image/svg">
   <meta name="description" content="">
   
   
-  <title>Home</title>
+  <title>{% block title %}Home{% endblock title %}</title>
   <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/web/assets/gdpr-plugin/gdpr-styles.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/smart-cart/minicart-theme.css' %}">
   <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/socicon/css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'assets/recaptcha.css' %}">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Homemade+Apple:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -116,12 +114,8 @@
 
 
 <script src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/web/assets/cookies-alert-plugin/cookies-alert-core.js' %}"></script>
-  <script src="{% static 'assets/web/assets/cookies-alert-plugin/cookies-alert-script.j' %}"></script>
   <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
   <script src="{% static 'assets/ytplayer/index.js' %}"></script>
-  <script src="{% static 'assets/smart-cart/minicart.js' %}"></script>
-  <script src="{% static 'assets/smart-cart/minicart-customizer.js' %}"></script>
   <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
   <script src="{% static 'assets/theme/js/script.js' %}"></script>
   <script src="{% static 'assets/formoid.min.js' %}"></script>
@@ -129,6 +123,5 @@
   
   
   
-<input name="cookieData" type="hidden" data-cookie-cookiesAlertType='false' data-cookie-customDialogSelector='null' data-cookie-colorText='#424a4d' data-cookie-colorBg='rgb(255, 255, 255)' data-cookie-opacityOverlay='0' data-cookie-textButton='GOT IT' data-cookie-rejectText='REJECT' data-cookie-colorButton='' data-cookie-rejectColor='' data-cookie-colorLink='#424a4d' data-cookie-underlineLink='true' data-cookie-text="We use cookies to give you the best experience. Read our <a href='privacy.html'>cookie policy</a>.">
   </body>
 </html>

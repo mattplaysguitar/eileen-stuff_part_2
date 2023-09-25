@@ -1,8 +1,11 @@
-{% extends '_base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}Forbidden (403){% endblock title %}
 
 {% block content %}
-<h1>Forbidden (403)</h1>
+<div class="container">
+    <h1>Forbidden (403)</h1>
 <p>CSRF verification failed. Request aborted.</p>
-{% endblock content %}
+<p>This site requires cookies to run. Please make sure cookies are enabled in your browser.</p>
+
+</div>{% endblock content %}    
