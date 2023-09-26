@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import IndexView, TermsOfServiceCreate
+from .views import IndexView, TermsOfServiceView
 
 urlpatterns = [
     path("", IndexView, name="home"),
-    path("tos/create/", TermsOfServiceCreate.as_view(), name="tos-create")
+    path("tos/",TermsOfServiceView.as_view(), name="tos")
 ]
