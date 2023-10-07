@@ -13,7 +13,10 @@
           <div class="card mb-3 mt-5 mt-0" style="max-width: 100%;">
             <div class="row g-0">
               <div class="col-md-4">
+                {% if post.cover %}
                 <a href="{% url 'post-detail' post.pk %}"><img src="{{post.cover.url}}" class="img-fluid rounded-start" style="" alt="{{post.title}}" height="100" width="auto"></a>
+                {% else %}
+                {% endif %}
               </div>
               <div class="col-md-8">
                 <div class="card-body">

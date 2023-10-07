@@ -32,9 +32,12 @@
             {% if forloop.counter <= 3 %}
             <div class="item features-image сol-12 col-md-6 col-lg-4 active">
                 <div class="item-wrapper">
+                    {% if post.cover %}
                     <div class="item-img">
                         <a href="{{post.get_absolute_url}}"><img src="{{post.cover.url}}" alt="" title="" data-slide-to="1" data-bs-slide-to="1"></a>
                     </div>
+                    {% else %}
+                    {% endif %}
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5">{{post.title}}</h5>
                         <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><p><strong>by {{post.author.first_name}} {{post.author.last_name}}</strong><strong>&nbsp;</strong></p></h6>
@@ -86,7 +89,7 @@
 </div>
 <span class="gdpr-block">
 <label>
-<span class="textGDPR display-7" style="color: #a7a7a7"><input type="checkbox" name="gdpr" id="gdpr-formbuilder-r" required="">By continuing you agree to our <a style="color: #149dcc; text-decoration: none;" href="terms.html">Terms of Service</a> and <a style="color: #149dcc; text-decoration: none;" href="policy.html">Privacy Policy</a>.</span>
+<span class="textGDPR display-7" style="color: #a7a7a7"><input type="checkbox" name="gdpr" id="gdpr-formbuilder-r" required="">By continuing you agree to our <a style="color: #149dcc; text-decoration: none;" href="{% url 'tos' %}">Terms of Service</a>.</span>
 </label>
 </span></form><!--Formbuilder Form-->
 </div>

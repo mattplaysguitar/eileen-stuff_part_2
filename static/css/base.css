@@ -26,3 +26,16 @@ p {
     margin-top: 1rem;
     color: #392F75;
 }
+
+#navbar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+    display: inline-block;
+}
+#brand {
+    max-width: 25%;
+
+}
